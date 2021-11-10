@@ -49,9 +49,20 @@ describe('[Exercise 4] Counter', () => {
     const actual = counter.countDown()
     expect(actual).toBe(expected)
   })
-
-  // test('[7] the SECOND CALL of counter.countDown returns the initial count minus one', () => {})
-  // test('[8] the count eventually reaches zero but does not go below zero', () => {})
+  test('[7] the SECOND CALL of counter.countDown returns the initial count minus one', () => {
+    const expected = 2
+    counter.countDown()
+    const actual = counter.countDown()
+    expect(actual).toBe(expected)
+  })
+  test('[8] the count eventually reaches zero but does not go below zero', () => {
+    const expected = 0
+    for (let i = 5; i > 0; i--) {
+      counter.countDown()
+    }
+    const actual = counter.countDown()
+    expect(actual).toBe(expected)
+  })
 })
 
 describe('[Exercise 5] Seasons', () => {
