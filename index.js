@@ -8,6 +8,13 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  const trimmedObj = { ...obj }
+  Object.keys(trimmedObj).map(key => {
+    if (typeof trimmedObj[key] === "string") {
+      trimmedObj[key] = trimmedObj[key].trim()
+    }
+  })
+  return trimmedObj
 }
 
 /**
