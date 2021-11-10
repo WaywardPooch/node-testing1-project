@@ -70,12 +70,56 @@ describe('[Exercise 5] Seasons', () => {
   beforeEach(() => {
     seasons = new utils.Seasons() // each test must start with fresh seasons
   })
-  // test('[9] the FIRST call of seasons.next returns "summer"', () => {})
-  // test('[10] the SECOND call of seasons.next returns "fall"', () => {})
-  // test('[11] the THIRD call of seasons.next returns "winter"', () => {})
-  // test('[12] the FOURTH call of seasons.next returns "spring"', () => {})
-  // test('[13] the FIFTH call of seasons.next returns again "summer"', () => {})
-  // test('[14] the 40th call of seasons.next returns "spring"', () => {})
+  test('[9] the FIRST call of seasons.next returns "summer"', () => {
+    const expected = "summer"
+    const actual = seasons.next()
+    expect(actual).toBe(expected)
+  })
+  test('[10] the SECOND call of seasons.next returns "fall"', () => {
+    const calls = 2
+    const expected = "fall"
+    let actual
+    for (let i = 0; i < calls; i++) {
+      actual = seasons.next()
+    }
+    expect(actual).toBe(expected)
+  })
+  test('[11] the THIRD call of seasons.next returns "winter"', () => {
+    const calls = 3
+    const expected = "winter"
+    let actual
+    for (let i = 0; i < calls; i++) {
+      actual = seasons.next()
+    }
+    expect(actual).toBe(expected)
+  })
+  test('[12] the FOURTH call of seasons.next returns "spring"', () => {
+    const calls = 4
+    const expected = "spring"
+    let actual
+    for (let i = 0; i < calls; i++) {
+      actual = seasons.next()
+    }
+    expect(actual).toBe(expected)
+  })
+  test('[13] the FIFTH call of seasons.next returns again "summer"', () => {
+    const calls = 5
+    const expected = "summer"
+    let actual
+    for (let i = 0; i < calls; i++) {
+      actual = seasons.next()
+    }
+    expect(actual).toBe(expected)
+  })
+  test('[14] the 40th call of seasons.next returns "spring"', () => {
+    const calls = 40
+    const expected = "spring"
+    let actual
+    for (let i = 0; i < calls; i++) {
+      actual = seasons.next()
+    }
+    expect(actual).toBe(expected)
+  })
 })
 
 describe('[Exercise 6] Car', () => {
