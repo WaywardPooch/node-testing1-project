@@ -129,8 +129,7 @@ describe('[Exercise 6] Car', () => {
   })
   test('[15] driving the car returns the updated odometer', () => {
     const expected = 5
-    const driveResult = focus.drive(5)
-    const actual = driveResult.odometer
+    const actual = focus.drive(5)
     expect(actual).toBe(expected)
   })
   test('[16] driving the car uses gas', () => {
