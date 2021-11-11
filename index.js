@@ -187,6 +187,7 @@ class Car {
     } else {
       this.tank += gallons
     }
+    return this.tank * this.mpg
   }
 }
 
