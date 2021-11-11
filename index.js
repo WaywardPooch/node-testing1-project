@@ -205,6 +205,10 @@ class Car {
  */
 function isEvenNumberAsync(number) {
   // ✨ implement
+  return new Promise(resolve => setTimeout(resolve, 1000))
+    .then(() => {
+      return Boolean(number % 2 === 0)
+    })
 }
 
 module.exports = {
